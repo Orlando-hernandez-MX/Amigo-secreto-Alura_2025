@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración de meta etiquetas y enlaces de fuentes -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Amigo secreto Alura 2025</title>
+</head>
+
+<body>
+    <main class="main-content">
+        <header class="header-banner">
+            <h1 class="main-title">Amigo Secreto - Alura 2025</h1>
+            <img src="assets/amigo-secreto.png" alt="Imagen representativa de amigo secreto" role="presentation">
+        </header>
+        <section class="input-section">
+            <h2 class="section-title">Escriba el nombre de tus amigos</h2>
+            <div class="input-wrapper">  
+                <input type="text" id="friendInput" class="input-name" placeholder="Introduce el nombre de tus amigos">
+                <button id="addButton" class="button-add" onclick="addFriend()">Añadir</button> 
+            </div>
+            <ul id="friendsList" class="name-list" aria-labelledby="friendsList" role="list"></ul>
+            <ul id="resultMessage" class="result-list" aria-live="polite"></ul>
+            <div class="button-container">
+                <button id="drawButton" class="button-draw" onclick="drawFriend()" aria-label="Sortear amigo secreto" disabled>
+                    <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
+                    Iniciar Juego
+                </button>
+            </div>
+            <p id="alertMessage" class="alert-message" role="alert" hidden>
+                Por favor, Ingrese un nombre válido (Sólo letras)
+            </p>
+            <div id="alertMessage" style="display: none;"></div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
